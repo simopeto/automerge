@@ -1,0 +1,33 @@
+﻿<Window x:Class="AutoMergeTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AutoMergeTool" Height="350" Width="800" ResizeMode="CanMinimize" >
+    <Grid Margin="0,0,0,0" Background="#FF5B8BB9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="279*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Fill="#FFD4D0C8" HorizontalAlignment="Left" Height="52" Margin="117,146,0,0" Stroke="Black" VerticalAlignment="Top" Width="105"/>
+        <Rectangle Grid.ColumnSpan="2" Fill="#FFD4D0C8" HorizontalAlignment="Left" Height="52" Margin="10,146,0,0" Stroke="Black" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name ="BtnRefreshFI" Content="Refresh" HorizontalAlignment="Left" Margin="37,147,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="20" Click="OnRefreshFIButton_Click"/>
+        <Button x:Name ="BtnMergeFI" Grid.ColumnSpan="2" Content="Merge" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top" Width="75" Click="OnMergeFIButton_Click" RenderTransformOrigin="0.533,0.35"/>
+        <TextBox x:Name ="TbUpperBranch"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,69,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+        <Label Grid.ColumnSpan="2" Content="Upper branch" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Grid.ColumnSpan="2" Content="Team branch" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name ="TbTeamBranch"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name ="TbBuild"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+        <CheckBox Name="CbAutomaticalMerge" Grid.ColumnSpan="2" Content="Automatical merge" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="220" Checked="OnCheckBox_Checked" Unchecked="OnCheckBox_Unchecked"/>
+        <TextBox x:Name ="TbWildcard"  Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,221,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+        <DataGrid x:Name ="DgChangesets" CanUserSortColumns="False" CanUserAddRows="false" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top" Height="153" Width="547" MouseUp="OnDataGrid_MouseUp"/>
+        <ProgressBar x:Name="ProgressBar" IsIndeterminate="True" Visibility="Hidden" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="10" Margin="462,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="BtnSave" Grid.ColumnSpan="2" Content="Save configuration" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" Width="109" Click="OnSaveButton_Click"/>
+        <TextBox x:Name="TbConsole" AcceptsReturn="True" Grid.ColumnSpan="2" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="145" Margin="235,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" Background="Black" Foreground="White"/>
+        <TextBox x:Name="TbWorkspacePath" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+        <Label Grid.ColumnSpan="2" Content="Workspace path" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Width="109" FontWeight="Bold"/>
+        <Button x:Name ="BtnRefreshRI" Content="Refresh" HorizontalAlignment="Left" Margin="144,146,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="20" Click="OnRefreshRIButton_Click"/>
+        <Button x:Name ="BtnMergeRI" Grid.ColumnSpan="2" Content="Merge" HorizontalAlignment="Left" Margin="144,171,0,0" VerticalAlignment="Top" Width="75" Click="OnMergeRIButton_Click" RenderTransformOrigin="0.533,0.35"/>
+        <Label Grid.ColumnSpan="2" Content="RI" HorizontalAlignment="Left" Margin="117,157,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Grid.ColumnSpan="2" Content="FI" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Grid.ColumnSpan="2" Content="Upload Build" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.241,0.609"/>
+    </Grid>
+</Window>
